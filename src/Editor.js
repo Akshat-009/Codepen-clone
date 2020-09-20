@@ -5,6 +5,9 @@ import "codemirror/mode/xml/xml"
 import "codemirror/mode/javascript/javascript"
 import "codemirror/mode/css/css"
 import {Controlled as ControlledEditor} from "react-codemirror2"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {faCompressAlt,faExpandAlt} from "@fortawesome/free-solid-svg-icons"
+
 function Editor({title,language,value,onChange}) {
     const [flexg,setflexg]=useState(1)
     function handlechange(editor,data,value){
@@ -17,7 +20,7 @@ function Editor({title,language,value,onChange}) {
         <div className={`editor__window  ${flexg?"":"closewindow"}`} >
             <div className="editor__header">
                 {title}
-                <button onClick={handlesize}>Open/Close</button>
+                <button className="burron" onClick={handlesize}><FontAwesomeIcon icon={flexg?(faCompressAlt):(faExpandAlt)}/></button>
             </div>
             
             <ControlledEditor
