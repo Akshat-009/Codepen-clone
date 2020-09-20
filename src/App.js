@@ -20,7 +20,8 @@ function App() {
      </script>
     </html>`)
     }  
-    timeout()
+    setTimeout(timeout,250)
+    return ()=> clearTimeout(timeout)
   
 
   },[html,css,js])
