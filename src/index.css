@@ -70,3 +70,8 @@
   border: none;
   cursor: pointer;
 }
+.document
+{
+  height: 50vh;
+  width: 100vw;
+}

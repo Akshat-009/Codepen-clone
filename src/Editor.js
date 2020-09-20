@@ -8,6 +8,7 @@ import {Controlled as ControlledEditor} from "react-codemirror2"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faCompressAlt,faExpandAlt} from "@fortawesome/free-solid-svg-icons"
 
+
 function Editor({title,language,value,onChange}) {
     const [flexg,setflexg]=useState(1)
     function handlechange(editor,data,value){
